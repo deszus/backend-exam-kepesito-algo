@@ -8,8 +8,8 @@ public class AddDigits {
             return -1;
         }
         for (char letter : input.toCharArray()) {
-            if (letter > 47 && letter < 58) {
-                result += letter - 48;
+            if (Character.isDigit(letter)) {
+                result += Character.getNumericValue(letter);
             }
         }
         return result;
